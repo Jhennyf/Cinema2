@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.mycompany.cinema"},{"l":"Controler"},{"l":"DAO"},{"l":"jdbc"},{"l":"model"},{"l":"view"}];updateSearchResults();
