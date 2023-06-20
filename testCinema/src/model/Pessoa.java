@@ -42,8 +42,9 @@ public class Pessoa implements Serializable {
         this.idade = (verifIdade(idade));
         this.celular = (verifCelular(celular));    }
 
-    public Pessoa(String cpf) {
-        this.cpf = cpf;
+    public Pessoa(String nome, String senha) {
+        this.nome = nome;
+        this.senha = senha;
     }
 
     public String verifNome(String nome) {

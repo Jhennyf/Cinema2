@@ -41,7 +41,6 @@ public class ClienteDAO {
 
             pstm.execute();
             pstm.close();
-
             System.out.println("Cadastrado! ");
         } catch (SQLException e) {
             System.out.println("Erro ao realizar cadastro. " + e);
@@ -49,13 +48,15 @@ public class ClienteDAO {
     }
 
     public List<Pessoa> listarCliente() {
-        Connection conn = null;
-        PreparedStatement pstm = null;
-        ResultSet rset = null;
+  
         List<Pessoa> lista = new ArrayList<Pessoa>();
         String sql = "select * from cliente";
+        PreparedStatement psm = null;
+        ResultSet rset = null;
+       
         try {
-            pstm = conn.prepareStatement(sql);
+            psm = conn.prepareStatement(sql);
+            rset = psm.executeQuery();
             while (rset.next()) {
                 Pessoa p = new Pessoa();
 
@@ -67,8 +68,10 @@ public class ClienteDAO {
                 p.setCelular(rset.getString("celular"));
                 lista.add(p);
             }
+            return lista;
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Erro: " + e);
+            return null;
         } finally {
 
             try {
@@ -77,8 +80,8 @@ public class ClienteDAO {
                     rset.close();
                 }
 
-                if (pstm != null) {
-                    pstm.close();
+                if (psm != null) {
+                    psm.close();
                 }
 
                 if (conn != null) {
@@ -89,13 +92,27 @@ public class ClienteDAO {
                 e.printStackTrace();
             }
         }
-        return lista;
+     
     }
 
-    public void buscarCpf(Pessoa cliente) {
+    public Pessoa Login(String cpf, String senha) {
+        String sql = "select cpf, senha from cliente where cpf = ? and senha = ? ";
+        PreparedStatement pstm = null;
+        ResultSet rset = null;
+        Pessoa pessoa = null;
         try {
-
-        } catch (Exception e) {
+            pstm = conn.prepareStatement(sql);
+            pstm.setString(1, cpf);
+            pstm.setString(2, senha);
+            rset = pstm.executeQuery();
+            if (rset.next()) {
+               String nomeUsuario = rset.getString("cpf");
+               String senhaSenha = rset.getString("senha");
+                pessoa = new Pessoa(nomeUsuario, senhaSenha);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+        return pessoa;
     }
 }

@@ -15,7 +15,8 @@ public class ConnectBD {
     
     public Connection getConnection(){
         try {
-            return DriverManager.getConnection("jdbc:mysql://127.0.0.1/cinema", "jhennyf", "123");
+            return DriverManager.getConnection("jdbc:mysql://127.0.0.1/cinema", "root", ""
+                    + "");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

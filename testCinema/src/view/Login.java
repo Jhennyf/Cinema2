@@ -4,6 +4,7 @@
  */
 package view;
 
+import Controler.ClienteControler;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,6 +18,8 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        this.setLocationRelativeTo(null);
+
     }
 
     /**
@@ -143,8 +146,15 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        JOptionPane.showMessageDialog(rootPane, "Login Concluído");
-        new TelaMostraSessoes().setVisible(true);        // TODO add your handling code here:
+        ClienteControler controler = new ClienteControler();
+        if (controler.login(CPF.getText(), SENHA.getText())) {
+            JOptionPane.showMessageDialog(rootPane, "Login Concluído");
+            new TelaMostraSessoes().setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Usuario não encontrado");
+        }
+
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void SENHAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SENHAActionPerformed

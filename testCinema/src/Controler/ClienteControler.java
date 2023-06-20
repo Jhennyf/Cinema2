@@ -14,8 +14,10 @@ import view.Cadastro;
  */
 public class ClienteControler {
     
+    ClienteDAO cDAO = new ClienteDAO();
+    
     public void cadastrar(Pessoa p){
-        ClienteDAO cDAO = new ClienteDAO();
+        
         p.setCpf(p.getCpf());
         p.setNome(p.getNome());
         p.setEmail(p.getEmail());
@@ -25,4 +27,7 @@ public class ClienteControler {
         cDAO.cadastrar(p);
     }
     
+    public boolean login(String cpf, String senha){
+        return cDAO.Login(cpf, senha) != null;
+    }
 }

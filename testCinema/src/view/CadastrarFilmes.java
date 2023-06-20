@@ -206,7 +206,7 @@ public class CadastrarFilmes extends javax.swing.JFrame {
         fc.cadastrar(f);    }//GEN-LAST:event_criarActionPerformed
 
     private void voltar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltar2ActionPerformed
-        new TelaMostraSessoes().setVisible(true);
+       new TelaAdministrador().setVisible(true);
     }//GEN-LAST:event_voltar2ActionPerformed
 
     /**

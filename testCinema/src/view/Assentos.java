@@ -30,23 +30,23 @@ public class Assentos extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         pagamento = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
-        jRadioButton9 = new javax.swing.JRadioButton();
-        jRadioButton10 = new javax.swing.JRadioButton();
-        jRadioButton11 = new javax.swing.JRadioButton();
-        jRadioButton12 = new javax.swing.JRadioButton();
-        jRadioButton13 = new javax.swing.JRadioButton();
-        jRadioButton14 = new javax.swing.JRadioButton();
-        jRadioButton15 = new javax.swing.JRadioButton();
-        jRadioButton16 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jLabel1 = new javax.swing.JLabel();
+        btn5 = new javax.swing.JRadioButton();
+        btn6 = new javax.swing.JRadioButton();
+        btn7 = new javax.swing.JRadioButton();
+        btn8 = new javax.swing.JRadioButton();
+        btn9 = new javax.swing.JRadioButton();
+        btn10 = new javax.swing.JRadioButton();
+        btn11 = new javax.swing.JRadioButton();
+        btn12 = new javax.swing.JRadioButton();
+        btn13 = new javax.swing.JRadioButton();
+        btn14 = new javax.swing.JRadioButton();
+        btn15 = new javax.swing.JRadioButton();
+        btn16 = new javax.swing.JRadioButton();
+        btn4 = new javax.swing.JRadioButton();
+        btn3 = new javax.swing.JRadioButton();
+        btn2 = new javax.swing.JRadioButton();
+        btn1 = new javax.swing.JRadioButton();
+        btnOne = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,78 +68,62 @@ public class Assentos extends javax.swing.JFrame {
         jLabel2.setText("Assentos CineVibe");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 370, 50));
 
-        buttonGroup1.add(jRadioButton5);
-        jRadioButton5.setText("5");
-        jPanel1.add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, -1, -1));
+        btn5.setText("5");
+        jPanel1.add(btn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, -1, -1));
 
-        buttonGroup1.add(jRadioButton6);
-        jRadioButton6.setText("6");
-        jPanel1.add(jRadioButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, -1, -1));
+        btn6.setText("6");
+        jPanel1.add(btn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, -1, -1));
 
-        buttonGroup1.add(jRadioButton7);
-        jRadioButton7.setText("7");
-        jPanel1.add(jRadioButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 260, -1, -1));
+        btn7.setText("7");
+        jPanel1.add(btn7, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 260, -1, -1));
 
-        buttonGroup1.add(jRadioButton8);
-        jRadioButton8.setText("8");
-        jPanel1.add(jRadioButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, -1, -1));
+        btn8.setText("8");
+        jPanel1.add(btn8, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, -1, -1));
 
-        buttonGroup1.add(jRadioButton9);
-        jRadioButton9.setText("9");
-        jPanel1.add(jRadioButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, -1, -1));
+        btn9.setText("9");
+        jPanel1.add(btn9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, -1, -1));
 
-        buttonGroup1.add(jRadioButton10);
-        jRadioButton10.setText("10");
-        jPanel1.add(jRadioButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, -1, -1));
+        btn10.setText("10");
+        jPanel1.add(btn10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, -1, -1));
 
-        buttonGroup1.add(jRadioButton11);
-        jRadioButton11.setText("11");
-        jPanel1.add(jRadioButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 370, -1, -1));
+        btn11.setText("11");
+        jPanel1.add(btn11, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 370, -1, -1));
 
-        buttonGroup1.add(jRadioButton12);
-        jRadioButton12.setText("12");
-        jPanel1.add(jRadioButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 370, -1, -1));
+        btn12.setText("12");
+        jPanel1.add(btn12, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 370, -1, -1));
 
-        buttonGroup1.add(jRadioButton13);
-        jRadioButton13.setText("13");
-        jRadioButton13.setToolTipText("13");
-        jPanel1.add(jRadioButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 480, -1, -1));
+        btn13.setText("13");
+        btn13.setToolTipText("13");
+        jPanel1.add(btn13, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 480, -1, -1));
 
-        buttonGroup1.add(jRadioButton14);
-        jRadioButton14.setText("14");
-        jPanel1.add(jRadioButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 480, -1, -1));
+        btn14.setText("14");
+        jPanel1.add(btn14, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 480, -1, -1));
 
-        buttonGroup1.add(jRadioButton15);
-        jRadioButton15.setText("15");
-        jPanel1.add(jRadioButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 480, -1, -1));
+        btn15.setText("15");
+        jPanel1.add(btn15, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 480, -1, -1));
 
-        buttonGroup1.add(jRadioButton16);
-        jRadioButton16.setText("16");
-        jPanel1.add(jRadioButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 480, -1, -1));
+        btn16.setText("16");
+        jPanel1.add(btn16, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 480, -1, -1));
 
-        buttonGroup1.add(jRadioButton4);
-        jRadioButton4.setText("4");
-        jPanel1.add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 150, -1, -1));
+        btn4.setText("4");
+        jPanel1.add(btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 150, -1, -1));
 
-        buttonGroup1.add(jRadioButton3);
-        jRadioButton3.setText("3");
-        jPanel1.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, -1, -1));
+        btn3.setText("3");
+        jPanel1.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, -1, -1));
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("2");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        btn2.setText("2");
+        btn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                btn2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, -1, -1));
+        jPanel1.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, -1, -1));
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("1");
-        jPanel1.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 40, 30));
+        btn1.setText("1");
+        jPanel1.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 40, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/assentos.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        btnOne.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/assentos.png"))); // NOI18N
+        jPanel1.add(btnOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -155,12 +139,44 @@ public class Assentos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_btn2ActionPerformed
 
     private void pagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pagamentoActionPerformed
-        new PagCinema().setVisible(true); // TODO add your handling code here:
+        if (btn1.isSelected()) {
+            btn1.setSelected(false);
+        } else if (btn2.isSelected()) {
+             btn1.setSelected(false);
+        } else if (btn3.isSelected()) {
+             btn1.setSelected(false);
+        } else if (btn4.isSelected()) {
+             btn1.setSelected(false);
+        } else if (btn5.isSelected()) {
+             btn1.setSelected(false);
+        } else if (btn6.isSelected()) {
+             btn1.setSelected(false);
+        } else if (btn7.isSelected()) {
+             btn7.setSelected(false);
+        } else if (btn8.isSelected()) {
+             btn8.setSelected(false);
+        } else if (btn9.isSelected()) {
+             btn9.setSelected(false);
+        } else if (btn10.isSelected()) {
+             btn10.setSelected(false);
+        } else if (btn11.isSelected()) {
+            btn11.setSelected(false);
+        } else if (btn12.isSelected()) {
+           btn12.setSelected(false);
+        } else if (btn13.isSelected()) {
+           btn13.setSelected(false);
+        } else if (btn14.isSelected()) {
+           btn14.setSelected(false);
+        } else if (btn15.isSelected()) {
+             btn15.setSelected(false);
+        } else if (btn16.isSelected()) {
+             btn16.setSelected(false);
+        }
     }//GEN-LAST:event_pagamentoActionPerformed
 
     /**
@@ -199,26 +215,26 @@ public class Assentos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton btn1;
+    private javax.swing.JRadioButton btn10;
+    private javax.swing.JRadioButton btn11;
+    private javax.swing.JRadioButton btn12;
+    private javax.swing.JRadioButton btn13;
+    private javax.swing.JRadioButton btn14;
+    private javax.swing.JRadioButton btn15;
+    private javax.swing.JRadioButton btn16;
+    private javax.swing.JRadioButton btn2;
+    private javax.swing.JRadioButton btn3;
+    private javax.swing.JRadioButton btn4;
+    private javax.swing.JRadioButton btn5;
+    private javax.swing.JRadioButton btn6;
+    private javax.swing.JRadioButton btn7;
+    private javax.swing.JRadioButton btn8;
+    private javax.swing.JRadioButton btn9;
+    private javax.swing.JLabel btnOne;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton11;
-    private javax.swing.JRadioButton jRadioButton12;
-    private javax.swing.JRadioButton jRadioButton13;
-    private javax.swing.JRadioButton jRadioButton14;
-    private javax.swing.JRadioButton jRadioButton15;
-    private javax.swing.JRadioButton jRadioButton16;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JButton pagamento;
     // End of variables declaration//GEN-END:variables
 }

@@ -44,7 +44,6 @@ public class TelaMostraSessoes extends javax.swing.JFrame {
         Aelefanta = new javax.swing.JButton();
         LUTHER = new javax.swing.JButton();
         DESTEMIDA = new javax.swing.JButton();
-        filme1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -121,15 +120,6 @@ public class TelaMostraSessoes extends javax.swing.JFrame {
             }
         });
 
-        filme1.setBackground(new java.awt.Color(153, 0, 0));
-        filme1.setForeground(new java.awt.Color(255, 255, 255));
-        filme1.setText("Cadastrar Filmes");
-        filme1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filme1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -158,17 +148,14 @@ public class TelaMostraSessoes extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(LUTHER, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE))
-                        .addContainerGap(88, Short.MAX_VALUE))
+                            .addComponent(LUTHER, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel6)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(filme1)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(DAMSEL, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(28, 28, 28)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(DAMSEL, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(126, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,8 +194,7 @@ public class TelaMostraSessoes extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                         .addComponent(DAMSEL, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(36, 36, 36)
-                                        .addComponent(filme1))
+                                        .addGap(59, 59, 59))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                         .addComponent(DESTEMIDA, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(57, 57, 57))))
@@ -239,15 +225,6 @@ public class TelaMostraSessoes extends javax.swing.JFrame {
     private void DAMSELActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DAMSELActionPerformed
         new SessaoDamsel().setVisible(true);
     }//GEN-LAST:event_DAMSELActionPerformed
-
-    private void filme1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filme1ActionPerformed
-        //teste
-        Filme f = new Filme();
-        FilmeControler fc = new FilmeControler();
-        f = fc.buscar(1);
-        DetalhesFilme df = new DetalhesFilme(f);
-        df.setVisible(true);
-    }//GEN-LAST:event_filme1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -289,7 +266,6 @@ public class TelaMostraSessoes extends javax.swing.JFrame {
     private javax.swing.JButton DAMSEL;
     private javax.swing.JButton DESTEMIDA;
     private javax.swing.JButton LUTHER;
-    private javax.swing.JButton filme1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
