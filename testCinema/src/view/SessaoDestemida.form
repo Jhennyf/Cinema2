@@ -70,20 +70,20 @@
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="Dublado" min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="botaoDublado" min="-2" pref="98" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="Legendado" min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="botaoLegendado" min="-2" pref="98" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jRadioButton2" min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="botao14h" min="-2" pref="98" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jRadioButton4" min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="botao18h" min="-2" pref="98" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jRadioButton3" min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="botao21h" min="-2" pref="98" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace pref="192" max="32767" attributes="0"/>
-                                  <Component id="jButton3" min="-2" pref="103" max="-2" attributes="0"/>
+                                  <Component id="botaoAssentos" min="-2" pref="103" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="87" max="32767" attributes="0"/>
@@ -117,21 +117,21 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
-                          <Component id="jButton3" min="-2" pref="62" max="-2" attributes="0"/>
+                          <Component id="botaoAssentos" min="-2" pref="62" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jRadioButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botao14h" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botao18h" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botao21h" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                           <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="Dublado" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Legendado" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botaoDublado" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botaoLegendado" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -241,7 +241,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="botaoAssentos">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="99" type="rgb"/>
@@ -252,7 +252,7 @@
             <Property name="text" type="java.lang.String" value="Assentos"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoAssentosActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
@@ -277,7 +277,7 @@
             <Property name="text" type="java.lang.String" value="Idioma:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="Dublado">
+        <Component class="javax.swing.JRadioButton" name="botaoDublado">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup2"/>
@@ -288,10 +288,10 @@
             <Property name="text" type="java.lang.String" value="Dublado"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DubladoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoDubladoActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="Legendado">
+        <Component class="javax.swing.JRadioButton" name="botaoLegendado">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup2"/>
@@ -302,10 +302,10 @@
             <Property name="text" type="java.lang.String" value="Legendado"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LegendadoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoLegendadoActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+        <Component class="javax.swing.JRadioButton" name="botao14h">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup1"/>
@@ -316,10 +316,10 @@
             <Property name="text" type="java.lang.String" value="14:30"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botao14hActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="jRadioButton3">
+        <Component class="javax.swing.JRadioButton" name="botao21h">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup1"/>
@@ -330,10 +330,10 @@
             <Property name="text" type="java.lang.String" value="21:30"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botao21hActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="jRadioButton4">
+        <Component class="javax.swing.JRadioButton" name="botao18h">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup1"/>
@@ -344,7 +344,7 @@
             <Property name="text" type="java.lang.String" value="18:00"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botao18hActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

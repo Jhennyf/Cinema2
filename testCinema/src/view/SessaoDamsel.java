@@ -4,14 +4,15 @@
  */
 package view;
 
-import javax.swing.JOptionPane;
+import Controler.SessaoControler;
+import model.Sessao;
 
 /**
  *
  * @author jhenn
  */
 public class SessaoDamsel extends javax.swing.JFrame {
-
+        SessaoControler controler = new SessaoControler();
     /**
      * Creates new form SessaoDamsel
      */
@@ -41,11 +42,11 @@ public class SessaoDamsel extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        Dublado = new javax.swing.JRadioButton();
-        Legendado = new javax.swing.JRadioButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        botaoDublado = new javax.swing.JRadioButton();
+        botaoLegendado = new javax.swing.JRadioButton();
+        botao14h = new javax.swing.JRadioButton();
+        botao21h = new javax.swing.JRadioButton();
+        botao18h = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -118,48 +119,48 @@ public class SessaoDamsel extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Idioma:");
 
-        buttonGroup1.add(Dublado);
-        Dublado.setForeground(new java.awt.Color(255, 255, 255));
-        Dublado.setText("Dublado");
-        Dublado.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(botaoDublado);
+        botaoDublado.setForeground(new java.awt.Color(255, 255, 255));
+        botaoDublado.setText("Dublado");
+        botaoDublado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DubladoActionPerformed(evt);
+                botaoDubladoActionPerformed(evt);
             }
         });
 
-        buttonGroup1.add(Legendado);
-        Legendado.setForeground(new java.awt.Color(255, 255, 255));
-        Legendado.setText("Legendado");
-        Legendado.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(botaoLegendado);
+        botaoLegendado.setForeground(new java.awt.Color(255, 255, 255));
+        botaoLegendado.setText("Legendado");
+        botaoLegendado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LegendadoActionPerformed(evt);
+                botaoLegendadoActionPerformed(evt);
             }
         });
 
-        buttonGroup2.add(jRadioButton1);
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setText("14:30");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup2.add(botao14h);
+        botao14h.setForeground(new java.awt.Color(255, 255, 255));
+        botao14h.setText("14:30");
+        botao14h.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                botao14hActionPerformed(evt);
             }
         });
 
-        buttonGroup2.add(jRadioButton2);
-        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setText("21:30");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup2.add(botao21h);
+        botao21h.setForeground(new java.awt.Color(255, 255, 255));
+        botao21h.setText("21:30");
+        botao21h.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                botao21hActionPerformed(evt);
             }
         });
 
-        buttonGroup2.add(jRadioButton3);
-        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton3.setText("18:00");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup2.add(botao18h);
+        botao18h.setForeground(new java.awt.Color(255, 255, 255));
+        botao18h.setText("18:00");
+        botao18h.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                botao18hActionPerformed(evt);
             }
         });
 
@@ -180,18 +181,18 @@ public class SessaoDamsel extends javax.swing.JFrame {
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addComponent(jLabel5)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(Dublado, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botaoDublado, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
-                            .addComponent(Legendado, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botaoLegendado, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botao14h, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botao18h, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(botao21h, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(90, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -210,9 +211,9 @@ public class SessaoDamsel extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton2))
+                    .addComponent(botao14h)
+                    .addComponent(botao18h)
+                    .addComponent(botao21h))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(82, 82, 82)
@@ -222,8 +223,8 @@ public class SessaoDamsel extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Dublado)
-                            .addComponent(Legendado))))
+                            .addComponent(botaoDublado)
+                            .addComponent(botaoLegendado))))
                 .addGap(26, 26, 26))
         );
 
@@ -233,32 +234,47 @@ public class SessaoDamsel extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
    
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-    new Assentos().setVisible(true);        // TODO add your handling code here:
+            Sessao s = new Sessao();
+            s.setIdFilme(2);
+            if(botao14h.isSelected()){
+                s.setHorario("14:30"); }
+            else if(botao18h.isSelected()){
+                s.setHorario("18:00"); }
+            else if(botao21h.isSelected()){
+                s.setHorario("21:30"); }
+            if(botaoDublado.isSelected()){
+                s.setTipo("Dublado"); }     
+            else if(botaoLegendado.isSelected()){
+                s.setTipo("Legendado"); }  
+            controler.cadastrar(s);
+            this.dispose();
+           // new TelaAssento().setVisible(true);
+        new TelaAssento().setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void voltar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltar2ActionPerformed
         new TelaMostraSessoes().setVisible(true);
     }//GEN-LAST:event_voltar2ActionPerformed
 
-    private void DubladoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DubladoActionPerformed
+    private void botaoDubladoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoDubladoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_DubladoActionPerformed
+    }//GEN-LAST:event_botaoDubladoActionPerformed
 
-    private void LegendadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LegendadoActionPerformed
+    private void botaoLegendadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoLegendadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_LegendadoActionPerformed
+    }//GEN-LAST:event_botaoLegendadoActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void botao14hActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao14hActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_botao14hActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void botao21hActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao21hActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_botao21hActionPerformed
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+    private void botao18hActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao18hActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    }//GEN-LAST:event_botao18hActionPerformed
 
     /**
      * @param args the command line arguments
@@ -296,8 +312,11 @@ public class SessaoDamsel extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton Dublado;
-    private javax.swing.JRadioButton Legendado;
+    private javax.swing.JRadioButton botao14h;
+    private javax.swing.JRadioButton botao18h;
+    private javax.swing.JRadioButton botao21h;
+    private javax.swing.JRadioButton botaoDublado;
+    private javax.swing.JRadioButton botaoLegendado;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton jButton3;
@@ -308,9 +327,6 @@ public class SessaoDamsel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton voltar2;

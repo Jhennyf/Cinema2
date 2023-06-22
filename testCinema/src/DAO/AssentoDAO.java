@@ -4,13 +4,12 @@
  */
 package DAO;
 
-import model.AssentosCinema;
 import jdbc.ConnectBD;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import model.Assento;
 
 /**
  *
@@ -24,21 +23,20 @@ public class AssentoDAO {
         this.conn = new ConnectBD().getConnection();
     }
     
-    public void cadastrar(AssentosCinema ac) {
-        String sql = "INSERT INTO  assento (id, nDoAssento,horas,statusOcupado) VALUES (null,?,?,?)";
-        PreparedStatement state = null;
-        ResultSet rset = null;
+    public void cadastrar(Assento as) {
         try {
-            state = conn.prepareStatement(sql);
-            state.setInt(1, ac.getnDoAssento());
-            state.setDate(2, (Date) ac.getHoras());
-            state.setBoolean(3, ac.getStatusOcupado());
-            state.execute();
-            state.close();
+            String sql = "INSERT INTO  assento (statusOcupado) VALUES (?)";
+            PreparedStatement pstm = (PreparedStatement) conn.prepareStatement(sql);
+            ResultSet rset = null;
+            pstm.setBoolean(1, as.getStatus());
+            
+            pstm.execute();
+            pstm.close();
+            
             System.out.println("Assento cadastrado com sucesso.");
         } catch (SQLException e) {
             System.out.println("Assento não cadastrado. ERRO:::" + e);
         }
     }
-    
 }
+    

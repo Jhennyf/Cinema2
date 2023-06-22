@@ -4,16 +4,20 @@
  */
 package view;
 
+import Controler.AssentoControler;
+import model.Assento;
+
 /**
  *
  * @author jhenn
  */
-public class Assentos extends javax.swing.JFrame {
+public class TelaAssento extends javax.swing.JFrame {
+    AssentoControler controler = new AssentoControler();
 
     /**
      * Creates new form Assentos
      */
-    public Assentos() {
+    public TelaAssento() {
         initComponents();
     }
 
@@ -28,7 +32,7 @@ public class Assentos extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        pagamento = new javax.swing.JButton();
+        btnPagamento = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         btn5 = new javax.swing.JRadioButton();
         btn6 = new javax.swing.JRadioButton();
@@ -53,20 +57,20 @@ public class Assentos extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(153, 0, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pagamento.setBackground(new java.awt.Color(153, 0, 0));
-        pagamento.setForeground(new java.awt.Color(255, 255, 255));
-        pagamento.setText("Pagamento");
-        pagamento.addActionListener(new java.awt.event.ActionListener() {
+        btnPagamento.setBackground(new java.awt.Color(153, 0, 0));
+        btnPagamento.setForeground(new java.awt.Color(255, 255, 255));
+        btnPagamento.setText("Pagamento");
+        btnPagamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pagamentoActionPerformed(evt);
+                btnPagamentoActionPerformed(evt);
             }
         });
-        jPanel1.add(pagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 540, -1, -1));
+        jPanel1.add(btnPagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 560, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Copperplate Gothic Light", 0, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Assentos CineVibe");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 370, 50));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 370, 50));
 
         btn5.setText("5");
         jPanel1.add(btn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, -1, -1));
@@ -120,6 +124,11 @@ public class Assentos extends javax.swing.JFrame {
         jPanel1.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, -1, -1));
 
         btn1.setText("1");
+        btn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 40, 30));
 
         btnOne.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/assentos.png"))); // NOI18N
@@ -143,41 +152,14 @@ public class Assentos extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn2ActionPerformed
 
-    private void pagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pagamentoActionPerformed
-        if (btn1.isSelected()) {
-            btn1.setSelected(false);
-        } else if (btn2.isSelected()) {
-             btn1.setSelected(false);
-        } else if (btn3.isSelected()) {
-             btn1.setSelected(false);
-        } else if (btn4.isSelected()) {
-             btn1.setSelected(false);
-        } else if (btn5.isSelected()) {
-             btn1.setSelected(false);
-        } else if (btn6.isSelected()) {
-             btn1.setSelected(false);
-        } else if (btn7.isSelected()) {
-             btn7.setSelected(false);
-        } else if (btn8.isSelected()) {
-             btn8.setSelected(false);
-        } else if (btn9.isSelected()) {
-             btn9.setSelected(false);
-        } else if (btn10.isSelected()) {
-             btn10.setSelected(false);
-        } else if (btn11.isSelected()) {
-            btn11.setSelected(false);
-        } else if (btn12.isSelected()) {
-           btn12.setSelected(false);
-        } else if (btn13.isSelected()) {
-           btn13.setSelected(false);
-        } else if (btn14.isSelected()) {
-           btn14.setSelected(false);
-        } else if (btn15.isSelected()) {
-             btn15.setSelected(false);
-        } else if (btn16.isSelected()) {
-             btn16.setSelected(false);
-        }
-    }//GEN-LAST:event_pagamentoActionPerformed
+    private void btnPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPagamentoActionPerformed
+        new PagCinema().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnPagamentoActionPerformed
+
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -196,21 +178,20 @@ public class Assentos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Assentos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Assento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Assentos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Assento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Assentos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Assento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Assentos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Assento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Assentos().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new TelaAssento().setVisible(true);
         });
     }
 
@@ -232,9 +213,9 @@ public class Assentos extends javax.swing.JFrame {
     private javax.swing.JRadioButton btn8;
     private javax.swing.JRadioButton btn9;
     private javax.swing.JLabel btnOne;
+    private javax.swing.JButton btnPagamento;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton pagamento;
     // End of variables declaration//GEN-END:variables
 }

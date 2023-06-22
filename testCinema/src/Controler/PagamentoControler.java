@@ -5,8 +5,8 @@
 package Controler;
 
 import DAO.PagamentoDAO;
+import java.sql.SQLException;
 import model.Pagamento;
-import view.PagCinema;
 
 /**
  *
@@ -14,8 +14,9 @@ import view.PagCinema;
  */
 public class PagamentoControler {
 
-    public void compra(Pagamento pag) {
-        PagamentoDAO pDAO = new PagamentoDAO();
-        pDAO.PagamentoDAO(pag);
+    PagamentoDAO pDAO = new PagamentoDAO();
+    
+    public boolean compra(Pagamento pag) {
+        return pDAO.PagamentoDAO(pag);
     }
 }

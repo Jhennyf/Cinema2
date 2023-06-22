@@ -5,6 +5,7 @@
 package view;
 
 import Controler.PagamentoControler;
+import javax.swing.JOptionPane;
 import model.Pagamento;
 
 /**
@@ -13,12 +14,19 @@ import model.Pagamento;
  */
 public class PagCinema extends javax.swing.JFrame {
 
-    PagamentoControler controler;
+    TelaAssento assentos;
+   
+
     /**
      * Creates new form Pagamento
      */
     public PagCinema() {
         initComponents();
+    }
+
+    public PagCinema(TelaAssento assentos) {
+        initComponents();
+        this.assentos = assentos;
     }
 
     /**
@@ -30,6 +38,8 @@ public class PagCinema extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField1 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -38,11 +48,16 @@ public class PagCinema extends javax.swing.JFrame {
         NUMCARTAO = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         CVV = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        ANOEXP = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         NOMECARTAO = new javax.swing.JTextField();
         btnPagar = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        txtCpf = new javax.swing.JTextField();
+        btncomprovante = new javax.swing.JButton();
+
+        jTextField1.setText("jTextField1");
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -90,10 +105,6 @@ public class PagCinema extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("CVC: ");
 
-        jLabel6.setFont(new java.awt.Font("Liberation Mono", 0, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Ano Exp:");
-
         jLabel7.setFont(new java.awt.Font("Liberation Mono", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Nome Cartão:");
@@ -107,6 +118,18 @@ public class PagCinema extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("CPF");
+
+        btncomprovante.setBackground(new java.awt.Color(153, 0, 0));
+        btncomprovante.setForeground(new java.awt.Color(255, 255, 255));
+        btncomprovante.setText("Comprovante");
+        btncomprovante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncomprovanteActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -114,31 +137,33 @@ public class PagCinema extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnPagar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btncomprovante)
+                .addGap(17, 17, 17))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(CVV, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(NUMCARTAO, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addGap(18, 18, 18)
                         .addComponent(NOMECARTAO))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CVV, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35)
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ANOEXP, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(NUMCARTAO)))
+                        .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnPagar)
-                .addGap(41, 41, 41))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -153,16 +178,20 @@ public class PagCinema extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(CVV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6)
-                    .addComponent(ANOEXP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CVV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(NOMECARTAO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
-                .addComponent(btnPagar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51))
+                .addGap(35, 35, 35)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnPagar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btncomprovante, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(49, 49, 49))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -171,17 +200,30 @@ public class PagCinema extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnPagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPagarActionPerformed
+        PagamentoControler controler = new PagamentoControler();
         Pagamento pg = new Pagamento();
         pg.setNumCartao(NUMCARTAO.getText());
-        pg.setCvv(Integer.parseInt(CVV.getText()));
-        pg.setDataExp(Integer.parseInt(ANOEXP.getText()));
-        pg.setNome(NOMECARTAO.getText());
-        controler.compra(pg);
+        pg.setCvv(CVV.getText());
+        pg.setNomeCart(NOMECARTAO.getText());
+        pg.setCpf(txtCpf.getText());
+        if (controler.compra(pg)) {
+            JOptionPane.showMessageDialog(btncomprovante, "Pagamento Realizado");
+
+        }
+
+        
+        
     }//GEN-LAST:event_btnPagarActionPerformed
 
     private void NUMCARTAOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NUMCARTAOActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NUMCARTAOActionPerformed
+
+    private void btncomprovanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncomprovanteActionPerformed
+        this.dispose();
+        new Comprovante().setVisible(true);
+
+    }//GEN-LAST:event_btncomprovanteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -220,18 +262,21 @@ public class PagCinema extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JTextField ANOEXP;
     public javax.swing.JTextField CVV;
     public javax.swing.JTextField NOMECARTAO;
     public javax.swing.JTextField NUMCARTAO;
     private javax.swing.JButton btnPagar;
+    private javax.swing.JButton btncomprovante;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txtCpf;
     // End of variables declaration//GEN-END:variables
 }

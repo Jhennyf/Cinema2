@@ -17,7 +17,7 @@ public class Pessoa implements Serializable {
     private int idade;
     private String celular;
     private String email;
-    private String cpf;
+    String cpf;
     private String senha;
 
     public Pessoa() {
@@ -35,16 +35,22 @@ public class Pessoa implements Serializable {
      */
     public Pessoa(String cpf, String senha, String email, String nome, int idade, String celular) {
         super();
-        this.cpf = (verifCpf(cpf));
-        this.senha = (verifSenha(senha));
-        this.email = (verifEmail(email));
-        this.nome = (verifNome(nome));     
-        this.idade = (verifIdade(idade));
-        this.celular = (verifCelular(celular));    }
+        this.cpf = cpf;
+        this.senha = senha;
+        this.email = email;
+        this.nome = nome;     
+        this.idade = idade;
+        this.celular = celular;   
+    
+    }
 
     public Pessoa(String nome, String senha) {
         this.nome = nome;
         this.senha = senha;
+    }
+    
+    public Pessoa(String cpf){
+     this.cpf = cpf;
     }
 
     public String verifNome(String nome) {

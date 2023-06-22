@@ -5,16 +5,17 @@
 package Controler;
 
 import DAO.AssentoDAO;
-import model.AssentosCinema;
-
+import model.Assento;
 /**
  *
  * @author jhenn
  */
 public class AssentoControler {
     
-    public void cadastrar(AssentosCinema as) {
-        AssentoDAO dao = new AssentoDAO();
-        dao.cadastrar(as);
+    public void cadastrar(Assento assento) {
+        Assento as = new Assento();
+        AssentoDAO aDAO = new AssentoDAO();
+        as.setStatus(assento.getStatus());
+        aDAO.cadastrar(as);
     }
 }

@@ -10,7 +10,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import jdbc.ConnectBD;
 import model.ADM;
-import model.Pessoa;
 
 /**
  *
@@ -27,8 +26,7 @@ public class AdmDAO {
     public void cadastrar(ADM adm) {
         String sql = "insert into adm (nome, senha) values (?,?)";
         PreparedStatement pstm = null;
-        ResultSet rset = null;
-        try {
+    try {
             pstm = conn.prepareStatement(sql);
             pstm.setString(1, adm.getNome());
             pstm.setString(2, adm.getSenha());

@@ -10,6 +10,8 @@ package view;
  */
 public class TelaInicio extends javax.swing.JFrame {
 
+    
+
     /**
      * Creates new form TelaInicio
      */
