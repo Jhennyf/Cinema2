@@ -4,6 +4,8 @@
  */
 package model;
 
+import view.UtilView.TelaAssento;
+
 
 /**
  *
@@ -25,6 +27,10 @@ public class Pagamento {
         this.nomeCart = nomeCart;
         this.cpf = cpf;
         
+    }
+
+    public Pagamento(TelaAssento aThis) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 

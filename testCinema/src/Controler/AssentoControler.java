@@ -13,9 +13,7 @@ import model.Assento;
 public class AssentoControler {
     
     public void cadastrar(Assento assento) {
-        Assento as = new Assento();
         AssentoDAO aDAO = new AssentoDAO();
-        as.setStatus(assento.getStatus());
-        aDAO.cadastrar(as);
+        aDAO.cadastrar(assento);
     }
 }

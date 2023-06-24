@@ -11,7 +11,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import jdbc.ConnectBD;
+import javax.swing.JOptionPane;
+import Factory.ConnectBD;
 import model.Sessao;
 
 /**
@@ -62,6 +63,34 @@ public class SessaoDAO {
         } catch (Exception e) {
             return null;
         }
+    }
+    
+    public void delete(int id) throws SQLException{
+        String sql = "DELETE FROM sessao WHERE id = ?";
+        java.sql.PreparedStatement psm = null;
+        ResultSet result = null;
+        
+        try {
+            psm = conn.prepareStatement(sql);
+            result = psm.executeQuery();
+            psm.setInt(1, id);
+            psm.execute();
+            if (psm.getUpdateCount() > 0){
+		JOptionPane.showMessageDialog(null, "Removido com sucesso!");
+            }else JOptionPane.showMessageDialog(null, "Não foi possÃ­vel remover!!");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                if (psm != null) {
+                     psm.close();
+		}if (conn != null) {
+                        conn.close();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+			}
+		} 
     }
 
     public List<Sessao> listarSessao(int i) {

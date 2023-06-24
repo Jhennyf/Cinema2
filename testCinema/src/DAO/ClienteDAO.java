@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import jdbc.ConnectBD;
+import Factory.ConnectBD;
 import model.Pessoa;
 
 /**
@@ -19,11 +19,11 @@ import model.Pessoa;
  * @author jhenn
  */
 public class ClienteDAO {
-    
+
     private Connection conn;
-    
+
     public ClienteDAO() {
-        this.conn = new ConnectBD().getConnection(); 
+        this.conn = new ConnectBD().getConnection();
     }
 
     public void cadastrar(Pessoa cliente) {
@@ -48,12 +48,12 @@ public class ClienteDAO {
     }
 
     public List<Pessoa> listarCliente() {
-  
+
         List<Pessoa> lista = new ArrayList<Pessoa>();
         String sql = "select * from cliente";
         PreparedStatement psm = null;
         ResultSet rset = null;
-       
+
         try {
             psm = conn.prepareStatement(sql);
             rset = psm.executeQuery();
@@ -92,27 +92,31 @@ public class ClienteDAO {
                 e.printStackTrace();
             }
         }
-     
+
     }
 
     public Pessoa Login(String cpf, String senha) {
-        String sql = "select cpf, senha from cliente where cpf = ? and senha = ? ";
+        String sql = "select * from cliente where cpf = ? and senha = ? ";
         PreparedStatement pstm = null;
         ResultSet rset = null;
-        Pessoa pessoa = null;
+        Pessoa p = new Pessoa();
         try {
             pstm = conn.prepareStatement(sql);
             pstm.setString(1, cpf);
             pstm.setString(2, senha);
             rset = pstm.executeQuery();
             if (rset.next()) {
-               String nomeUsuario = rset.getString("cpf");
-               String senhaSenha = rset.getString("senha");
-                pessoa = new Pessoa(nomeUsuario, senhaSenha);
+                p.setCpf(rset.getString("cpf"));
+                p.setSenha(rset.getString("senha"));
+                p.setEmail(rset.getString("email"));
+                p.setNome(rset.getNString("nome"));
+                p.setIdade(rset.getInt("idade"));
+                p.setCelular(rset.getString("celular"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
+            return null;
         }
-        return pessoa;
+        return p;
     }
 }

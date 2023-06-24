@@ -44,10 +44,8 @@ public class Pessoa implements Serializable {
     
     }
 
-    public Pessoa(String nome, String senha) {
-        this.nome = nome;
-        this.senha = senha;
-    }
+ 
+    
     
     public Pessoa(String cpf){
      this.cpf = cpf;
@@ -220,4 +218,10 @@ public class Pessoa implements Serializable {
         this.email = email;
     }
 
+    @Override
+    public String toString() {
+        return "Pessoa{" + "nome=" + nome + ", idade=" + idade + ", celular=" + celular + ", email=" + email + ", cpf=" + cpf + ", senha=" + senha + '}';
+    }
+    
+    
 }

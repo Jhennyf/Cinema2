@@ -4,8 +4,6 @@
  */
 package model;
 
-import java.util.Random;
-
 /**
  *
  * @author jhenn
@@ -13,20 +11,31 @@ import java.util.Random;
 public class Assento {
 
     private int id;
+    private int nrCadeira;
     private Boolean status;
+    private String cpf;
 
     public Assento() {
     }
 
-    public Assento(Boolean statusOcupado) {
-        this.id = geraId(id);
+    /**
+     *
+     * @param statusOcupado
+     * @param cpf
+     * @param nrCadeira
+     */
+    public Assento(Boolean statusOcupado, String cpf, int nrCadeira) {
         this.status = statusOcupado;
+        this.cpf = cpf;
+        this.nrCadeira = nrCadeira;
+    }
+    
+     public int getNrCadeira() {
+        return nrCadeira;
     }
 
-    public int geraId(int idSessoes){
-        Random gerador = new Random();
-        this.id = gerador.nextInt(100,900);
-        return this.getId();
+    public void setNrCadeira(int nrCadeira) {
+        this.nrCadeira = nrCadeira;
     }
     
     public int getId() {
@@ -45,9 +54,18 @@ public class Assento {
         this.status = status;
     }
 
-    @Override
-    public String toString() {
-        return "AssentosCinema{" + "id=" + id + " statusOcupado=" + status + '}';
+    public String getCpf() {
+        return cpf;
     }
 
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    @Override
+    public String toString() {
+        return "Assento{" + "id=" + id + ", nrCadeira=" + nrCadeira + ", status=" + status + ", cpf=" + cpf + '}';
+    }
+    
+    
 }

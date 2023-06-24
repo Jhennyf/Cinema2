@@ -6,7 +6,6 @@ package Controler;
 
 import DAO.ClienteDAO;
 import model.Pessoa;
-import view.Cadastro;
 
 /**
  *
@@ -17,17 +16,10 @@ public class ClienteControler {
     ClienteDAO cDAO = new ClienteDAO();
     
     public void cadastrar(Pessoa p){
-        
-        p.setCpf(p.getCpf());
-        p.setNome(p.getNome());
-        p.setEmail(p.getEmail());
-        p.setIdade(p.getIdade());
-        p.setCelular(p.getCelular());
-        p.setSenha(p.getSenha());
         cDAO.cadastrar(p);
     }
     
-    public boolean login(String cpf, String senha){
-        return cDAO.Login(cpf, senha) != null;
+    public Pessoa login(String cpf, String senha){
+         return cDAO.Login(cpf, senha);
     }
 }
